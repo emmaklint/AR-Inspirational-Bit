@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Measure-->
         <scene sceneID="h8w-dU-93P">
             <objects>
-                <viewController id="5qn-7y-2qV" sceneMemberID="viewController">
+                <viewController id="5qn-7y-2qV" customClass="MeasureViewController" customModule="AR_Inspirational_Bit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xgz-7A-53T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,13 +31,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="89Z-AU-hzT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="RWI-zM-1Tc"/>
+                    <tabBarItem key="tabBarItem" title="Measure" image="measure" id="RWI-zM-1Tc"/>
+                    <connections>
+                        <outlet property="sceneView" destination="Tqf-7h-Zkp" id="LL7-BY-Nce"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5u-cg-EOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1858" y="-82"/>
         </scene>
-        <!--Item-->
+        <!--Objects-->
         <scene sceneID="VFh-Yx-SfY">
             <objects>
                 <viewController id="FQi-lL-D0w" sceneMemberID="viewController">
@@ -47,7 +50,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CYp-hj-i80"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6Xh-XZ-dAO"/>
+                    <tabBarItem key="tabBarItem" title="Objects" id="6Xh-XZ-dAO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASJ-3N-Jrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,6 +108,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="measure" width="25" height="25"/>
         <image name="plane" width="25" height="25"/>
     </resources>
 </document>
