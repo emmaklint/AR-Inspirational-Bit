@@ -10,8 +10,8 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
-
+class PlaneController: UIViewController, ARSCNViewDelegate {
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -22,6 +22,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +30,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
+        
+        configuration.planeDetection = .horizontal
 
         // Run the view's session
         sceneView.session.run(configuration)
@@ -45,17 +48,32 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
     // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
+    /*
+     // Override to create and configure nodes for anchors added to the view's session.
+     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+     let node = SCNNode()
      
-        return node
+     return node
+     }
+     */
+    
+    func createPlane(planeAnchor: ARPlaneAnchor) -> SCNNode {
+        let textureNode = SCNNode(geometry: SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z)))
+        textureNode.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "lava")
+        textureNode.geometry?.firstMaterial?.isDoubleSided = true
+        textureNode.position = SCNVector3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
+        textureNode.eulerAngles = SCNVector3(90.degreesToRadians, 0, 0)
+        return textureNode
     }
-*/
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
+        let textureNode = createPlane(planeAnchor: planeAnchor)
+        node.addChildNode(textureNode)
+    }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
@@ -71,4 +89,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+}
+
+extension Int {
+    var degreesToRadians: Double { return Double(self) * .pi/180 }
 }

@@ -13,6 +13,7 @@
 		7A4793FD2074C603002507CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4793FB2074C603002507CC /* Main.storyboard */; };
 		7A4793FF2074C606002507CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4793FE2074C606002507CC /* Assets.xcassets */; };
 		7A4794022074C606002507CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4794002074C606002507CC /* LaunchScreen.storyboard */; };
+		7A47940A2075002B002507CC /* PlaneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4794092075002B002507CC /* PlaneController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7A4793FE2074C606002507CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A4794012074C606002507CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A4794032074C606002507CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4794092075002B002507CC /* PlaneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7A4793F52074C603002507CC /* AppDelegate.swift */,
 				7A4793F72074C603002507CC /* art.scnassets */,
 				7A4793F92074C603002507CC /* ViewController.swift */,
+				7A4794092075002B002507CC /* PlaneController.swift */,
 				7A4793FB2074C603002507CC /* Main.storyboard */,
 				7A4793FE2074C606002507CC /* Assets.xcassets */,
 				7A4794002074C606002507CC /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4793FA2074C603002507CC /* ViewController.swift in Sources */,
+				7A47940A2075002B002507CC /* PlaneController.swift in Sources */,
 				7A4793F62074C603002507CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.emmaklint.AR-Inspirational-Bit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.emmaklint.AR-Inspirational-Bit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
