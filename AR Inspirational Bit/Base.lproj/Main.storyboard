@@ -21,24 +21,42 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqf-7h-Zkp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qR-qC-5b5">
+                                <rect key="frame" x="137.5" y="35" width="100" height="34.5"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KRQ-Wq-BgD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="8zI-D9-Jhw">
+                                <rect key="frame" x="175.5" y="321.5" width="24" height="24"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="8zI-D9-Jhw" firstAttribute="centerY" secondItem="Xgz-7A-53T" secondAttribute="centerY" id="A0x-gW-Qla"/>
                             <constraint firstItem="Tqf-7h-Zkp" firstAttribute="leading" secondItem="89Z-AU-hzT" secondAttribute="leading" id="FW4-hf-OIS"/>
                             <constraint firstItem="89Z-AU-hzT" firstAttribute="bottom" secondItem="Tqf-7h-Zkp" secondAttribute="bottom" id="H93-Et-lFS"/>
+                            <constraint firstItem="7qR-qC-5b5" firstAttribute="centerX" secondItem="Xgz-7A-53T" secondAttribute="centerX" id="JEn-8s-PgA"/>
+                            <constraint firstItem="8zI-D9-Jhw" firstAttribute="centerX" secondItem="Xgz-7A-53T" secondAttribute="centerX" id="Mfg-AW-lCW"/>
                             <constraint firstItem="Tqf-7h-Zkp" firstAttribute="top" secondItem="89Z-AU-hzT" secondAttribute="top" id="Sp8-J8-RyC"/>
                             <constraint firstItem="89Z-AU-hzT" firstAttribute="trailing" secondItem="Tqf-7h-Zkp" secondAttribute="trailing" id="aGb-ap-1gx"/>
+                            <constraint firstItem="7qR-qC-5b5" firstAttribute="top" secondItem="89Z-AU-hzT" secondAttribute="top" constant="15" id="tzK-2K-zmw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="89Z-AU-hzT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Measure" image="measure" id="RWI-zM-1Tc"/>
                     <connections>
+                        <outlet property="distance" destination="7qR-qC-5b5" id="MvS-hf-uHD"/>
                         <outlet property="sceneView" destination="Tqf-7h-Zkp" id="LL7-BY-Nce"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5u-cg-EOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="-82"/>
+            <point key="canvasLocation" x="1856.8" y="-82.3088455772114"/>
         </scene>
         <!--Objects-->
         <scene sceneID="VFh-Yx-SfY">
@@ -108,6 +126,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="24" height="24"/>
         <image name="measure" width="25" height="25"/>
         <image name="plane" width="25" height="25"/>
     </resources>

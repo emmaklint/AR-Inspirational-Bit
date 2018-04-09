@@ -31,7 +31,7 @@ class PlaneController: UIViewController, ARSCNViewDelegate {
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         
-        configuration.planeDetection = .horizontal
+        configuration.planeDetection = .vertical
 
         // Run the view's session
         sceneView.session.run(configuration)
@@ -73,6 +73,23 @@ class PlaneController: UIViewController, ARSCNViewDelegate {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {return}
         let textureNode = createPlane(planeAnchor: planeAnchor)
         node.addChildNode(textureNode)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        node.enumerateChildNodes { (childNode, _) in
+            childNode.removeFromParentNode()
+        }
+        
+        let textureNode = createPlane(planeAnchor: planeAnchor)
+        node.addChildNode(textureNode)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
+        guard let _ = anchor as? ARPlaneAnchor else { return }
+        node.enumerateChildNodes { (childNode, _) in
+            childNode.removeFromParentNode()
+        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
