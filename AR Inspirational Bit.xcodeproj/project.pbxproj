@@ -15,6 +15,7 @@
 		7A4793FF2074C606002507CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4793FE2074C606002507CC /* Assets.xcassets */; };
 		7A4794022074C606002507CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4794002074C606002507CC /* LaunchScreen.storyboard */; };
 		7A47940A2075002B002507CC /* PlaneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4794092075002B002507CC /* PlaneController.swift */; };
+		7AF568FA2084E4020068217C /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF568F92084E4020068217C /* ObjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7A4794012074C606002507CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A4794032074C606002507CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A4794092075002B002507CC /* PlaneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneController.swift; sourceTree = "<group>"; };
+		7AF568F92084E4020068217C /* ObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7A4793F52074C603002507CC /* AppDelegate.swift */,
 				7A4793F72074C603002507CC /* art.scnassets */,
 				7A4793F92074C603002507CC /* ViewController.swift */,
+				7AF568F92084E4020068217C /* ObjectViewController.swift */,
 				7A4794092075002B002507CC /* PlaneController.swift */,
 				7A3C1A86207648F0000CC20D /* MeasureViewController.swift */,
 				7A4793FB2074C603002507CC /* Main.storyboard */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4793FA2074C603002507CC /* ViewController.swift in Sources */,
+				7AF568FA2084E4020068217C /* ObjectViewController.swift in Sources */,
 				7A47940A2075002B002507CC /* PlaneController.swift in Sources */,
 				7A4793F62074C603002507CC /* AppDelegate.swift in Sources */,
 				7A3C1A87207648F0000CC20D /* MeasureViewController.swift in Sources */,

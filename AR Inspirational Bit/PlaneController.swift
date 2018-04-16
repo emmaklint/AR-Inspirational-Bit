@@ -21,8 +21,9 @@ class PlaneController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false;
         self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,7 +32,7 @@ class PlaneController: UIViewController, ARSCNViewDelegate {
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         
-        configuration.planeDetection = .vertical
+        configuration.planeDetection = [.horizontal, .vertical]
 
         // Run the view's session
         sceneView.session.run(configuration)
@@ -62,7 +63,7 @@ class PlaneController: UIViewController, ARSCNViewDelegate {
     
     func createPlane(planeAnchor: ARPlaneAnchor) -> SCNNode {
         let textureNode = SCNNode(geometry: SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z)))
-        textureNode.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "lava")
+        textureNode.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "texture.png")
         textureNode.geometry?.firstMaterial?.isDoubleSided = true
         textureNode.position = SCNVector3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
         textureNode.eulerAngles = SCNVector3(90.degreesToRadians, 0, 0)

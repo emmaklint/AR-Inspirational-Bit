@@ -37,7 +37,7 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
         translationMatrix.columns.3.z = -0.1
         let modifiedMatrix = simd_mul(transform, translationMatrix)
         let sphere = SCNNode(geometry: SCNSphere(radius: 0.005))
-        sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+        sphere.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         sphere.simdTransform = modifiedMatrix
         self.sceneView.scene.rootNode.addChildNode(sphere)
         self.startingPosition = sphere

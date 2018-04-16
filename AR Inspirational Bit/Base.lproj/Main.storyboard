@@ -25,7 +25,7 @@
                                 <rect key="frame" x="137.5" y="35" width="100" height="34.5"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="KRQ-Wq-BgD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="KRQ-Wq-BgD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -48,7 +48,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="89Z-AU-hzT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Measure" image="measure" id="RWI-zM-1Tc"/>
+                    <tabBarItem key="tabBarItem" title="Measure" image="measure" id="Ob2-Da-x2W"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="distance" destination="7qR-qC-5b5" id="MvS-hf-uHD"/>
                         <outlet property="sceneView" destination="Tqf-7h-Zkp" id="LL7-BY-Nce"/>
@@ -58,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="1856.8" y="-82.3088455772114"/>
         </scene>
-        <!--Objects-->
+        <!--Recognition-->
         <scene sceneID="VFh-Yx-SfY">
             <objects>
                 <viewController id="FQi-lL-D0w" sceneMemberID="viewController">
@@ -68,12 +69,42 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CYp-hj-i80"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Objects" id="6Xh-XZ-dAO"/>
+                    <tabBarItem key="tabBarItem" title="Recognition" image="image" id="6Xh-XZ-dAO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASJ-3N-Jrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="-82"/>
+            <point key="canvasLocation" x="2609" y="-82"/>
+        </scene>
+        <!--Object-->
+        <scene sceneID="6GE-l2-dzb">
+            <objects>
+                <viewController id="c7X-zy-7ue" customClass="ObjectViewController" customModule="AR_Inspirational_Bit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qIO-vt-H9j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9X-nm-m1P">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Pr-3a-dqv" firstAttribute="bottom" secondItem="Y9X-nm-m1P" secondAttribute="bottom" id="5AD-cc-7iz"/>
+                            <constraint firstItem="9Pr-3a-dqv" firstAttribute="trailing" secondItem="Y9X-nm-m1P" secondAttribute="trailing" id="NdC-hi-XD7"/>
+                            <constraint firstItem="Y9X-nm-m1P" firstAttribute="leading" secondItem="9Pr-3a-dqv" secondAttribute="leading" id="UFl-Mg-F0k"/>
+                            <constraint firstItem="Y9X-nm-m1P" firstAttribute="top" secondItem="9Pr-3a-dqv" secondAttribute="top" id="pA8-TR-W8Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Pr-3a-dqv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Object" image="world" id="yXn-ZT-KUM"/>
+                    <connections>
+                        <outlet property="sceneView" destination="Y9X-nm-m1P" id="yLK-0p-fv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vro-dA-VcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3438" y="-82"/>
         </scene>
         <!--Plane-->
         <scene sceneID="dCQ-YL-4U5">
@@ -118,16 +149,19 @@
                         <segue destination="2fD-XG-M1z" kind="relationship" relationship="viewControllers" id="yxg-9v-ZaX"/>
                         <segue destination="5qn-7y-2qV" kind="relationship" relationship="viewControllers" id="Aj2-NT-San"/>
                         <segue destination="FQi-lL-D0w" kind="relationship" relationship="viewControllers" id="oT1-A1-evc"/>
+                        <segue destination="c7X-zy-7ue" kind="relationship" relationship="viewControllers" id="JJc-Ra-gEp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gA-5w-7Mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="-1239"/>
+            <point key="canvasLocation" x="2247" y="-1047"/>
         </scene>
     </scenes>
     <resources>
         <image name="Add" width="24" height="24"/>
+        <image name="image" width="25" height="25"/>
         <image name="measure" width="25" height="25"/>
         <image name="plane" width="25" height="25"/>
+        <image name="world" width="25" height="25"/>
     </resources>
 </document>
