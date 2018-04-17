@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A3982A72085EDB800FF2AC4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3982A62085EDB800FF2AC4 /* ImageViewController.swift */; };
 		7A3C1A87207648F0000CC20D /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3C1A86207648F0000CC20D /* MeasureViewController.swift */; };
 		7A4793F62074C603002507CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4793F52074C603002507CC /* AppDelegate.swift */; };
 		7A4793F82074C603002507CC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4793F72074C603002507CC /* art.scnassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A3982A62085EDB800FF2AC4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		7A3C1A86207648F0000CC20D /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 		7A4793F22074C603002507CC /* AR Inspirational Bit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Inspirational Bit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4793F52074C603002507CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				7AF568F92084E4020068217C /* ObjectViewController.swift */,
 				7A4794092075002B002507CC /* PlaneController.swift */,
 				7A3C1A86207648F0000CC20D /* MeasureViewController.swift */,
+				7A3982A62085EDB800FF2AC4 /* ImageViewController.swift */,
 				7A4793FB2074C603002507CC /* Main.storyboard */,
 				7A4793FE2074C606002507CC /* Assets.xcassets */,
 				7A4794002074C606002507CC /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				7AF568FA2084E4020068217C /* ObjectViewController.swift in Sources */,
 				7A47940A2075002B002507CC /* PlaneController.swift in Sources */,
 				7A4793F62074C603002507CC /* AppDelegate.swift in Sources */,
+				7A3982A72085EDB800FF2AC4 /* ImageViewController.swift in Sources */,
 				7A3C1A87207648F0000CC20D /* MeasureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

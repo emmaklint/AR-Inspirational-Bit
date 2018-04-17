@@ -62,15 +62,44 @@
         <!--Recognition-->
         <scene sceneID="VFh-Yx-SfY">
             <objects>
-                <viewController id="FQi-lL-D0w" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DVJ-Vp-U75">
+                <viewController id="FQi-lL-D0w" customClass="ImageViewController" customModule="AR_Inspirational_Bit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVJ-Vp-U75" customClass="Ima">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xiB-3D-wPK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No image detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbJ-Wm-vsG">
+                                <rect key="frame" x="20" y="35" width="335" height="27.5"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="o0i-gv-PJH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CYp-hj-i80" firstAttribute="bottom" secondItem="xiB-3D-wPK" secondAttribute="bottom" id="31m-w8-04c"/>
+                            <constraint firstItem="xiB-3D-wPK" firstAttribute="top" secondItem="CYp-hj-i80" secondAttribute="top" id="AAu-2Z-mvD"/>
+                            <constraint firstItem="mbJ-Wm-vsG" firstAttribute="centerX" secondItem="DVJ-Vp-U75" secondAttribute="centerX" id="JL0-Hn-zwl"/>
+                            <constraint firstAttribute="trailing" secondItem="xiB-3D-wPK" secondAttribute="trailing" id="Xmf-oR-0r0"/>
+                            <constraint firstItem="mbJ-Wm-vsG" firstAttribute="top" secondItem="CYp-hj-i80" secondAttribute="top" constant="15" id="fPu-lr-PtX"/>
+                            <constraint firstItem="CYp-hj-i80" firstAttribute="trailing" secondItem="mbJ-Wm-vsG" secondAttribute="trailing" constant="20" id="o0l-PU-Z38"/>
+                            <constraint firstItem="xiB-3D-wPK" firstAttribute="leading" secondItem="CYp-hj-i80" secondAttribute="leading" id="xS7-Wy-tZC"/>
+                            <constraint firstItem="mbJ-Wm-vsG" firstAttribute="leading" secondItem="CYp-hj-i80" secondAttribute="leading" constant="20" id="yAx-E0-FBX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CYp-hj-i80"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recognition" image="image" id="6Xh-XZ-dAO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="sceneView" destination="xiB-3D-wPK" id="f6E-DJ-2AC"/>
+                        <outlet property="textLabel" destination="mbJ-Wm-vsG" id="3Xh-pN-sio"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASJ-3N-Jrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
