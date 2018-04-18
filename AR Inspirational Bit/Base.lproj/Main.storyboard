@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Measure-->
+        <!--Placement-->
         <scene sceneID="h8w-dU-93P">
             <objects>
                 <viewController id="5qn-7y-2qV" customClass="MeasureViewController" customModule="AR_Inspirational_Bit" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="89Z-AU-hzT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Measure" image="measure" id="Ob2-Da-x2W"/>
+                    <tabBarItem key="tabBarItem" title="Placement" image="measure" id="Ob2-Da-x2W"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="distance" destination="7qR-qC-5b5" id="MvS-hf-uHD"/>
@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="1856.8" y="-82.3088455772114"/>
         </scene>
-        <!--Recognition-->
+        <!--Annotation-->
         <scene sceneID="VFh-Yx-SfY">
             <objects>
                 <viewController id="FQi-lL-D0w" customClass="ImageViewController" customModule="AR_Inspirational_Bit" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,7 +94,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CYp-hj-i80"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recognition" image="image" id="6Xh-XZ-dAO"/>
+                    <tabBarItem key="tabBarItem" title="Annotation" image="image" id="6Xh-XZ-dAO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="sceneView" destination="xiB-3D-wPK" id="f6E-DJ-2AC"/>
@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="2609" y="-82"/>
         </scene>
-        <!--Object-->
+        <!--Visualization-->
         <scene sceneID="6GE-l2-dzb">
             <objects>
                 <viewController id="c7X-zy-7ue" customClass="ObjectViewController" customModule="AR_Inspirational_Bit" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +126,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Pr-3a-dqv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Object" image="world" id="yXn-ZT-KUM"/>
+                    <tabBarItem key="tabBarItem" title="Visualization" image="world" id="yXn-ZT-KUM"/>
                     <connections>
                         <outlet property="sceneView" destination="Y9X-nm-m1P" id="yLK-0p-fv1"/>
                     </connections>
@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="3438" y="-82"/>
         </scene>
-        <!--Plane-->
+        <!--Detection-->
         <scene sceneID="dCQ-YL-4U5">
             <objects>
                 <viewController id="2fD-XG-M1z" customClass="PlaneController" customModule="AR_Inspirational_Bit" customModuleProvider="target" sceneMemberID="viewController">
@@ -156,7 +156,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dsR-ND-XgY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Plane" image="plane" id="yco-2W-zO9"/>
+                    <tabBarItem key="tabBarItem" title="Detection" image="plane" id="yco-2W-zO9"/>
                     <connections>
                         <outlet property="sceneView" destination="5sY-MI-G07" id="kKU-9m-M3c"/>
                     </connections>

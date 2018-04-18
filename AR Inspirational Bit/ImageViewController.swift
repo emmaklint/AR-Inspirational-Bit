@@ -59,7 +59,7 @@ class ImageViewController: UIViewController, ARSCNViewDelegate {
     
     func sessionWasInterrupted(_ session: ARSession) {
         // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
+        print("Interrupted")
     }
     
     func sessionInterruptionEnded(_ session: ARSession) {
@@ -76,6 +76,7 @@ class ImageViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
+        
         if let imageName = imageAnchor.referenceImage.name {
             print(imageName)
             
@@ -107,6 +108,8 @@ class ImageViewController: UIViewController, ARSCNViewDelegate {
         node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         node.geometry?.firstMaterial?.transparency = 0
         node.geometry?.firstMaterial?.fillMode = SCNFillMode.lines
+        
+        print("update")
         
     }
 }
