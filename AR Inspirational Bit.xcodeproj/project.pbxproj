@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A067C5620874B8D006C12D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A067C5520874B8D006C12D5 /* Assets.xcassets */; };
 		7A3982A72085EDB800FF2AC4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3982A62085EDB800FF2AC4 /* ImageViewController.swift */; };
 		7A3C1A87207648F0000CC20D /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3C1A86207648F0000CC20D /* MeasureViewController.swift */; };
 		7A4793F62074C603002507CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4793F52074C603002507CC /* AppDelegate.swift */; };
 		7A4793F82074C603002507CC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4793F72074C603002507CC /* art.scnassets */; };
 		7A4793FA2074C603002507CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4793F92074C603002507CC /* ViewController.swift */; };
 		7A4793FD2074C603002507CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4793FB2074C603002507CC /* Main.storyboard */; };
-		7A4793FF2074C606002507CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4793FE2074C606002507CC /* Assets.xcassets */; };
 		7A4794022074C606002507CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4794002074C606002507CC /* LaunchScreen.storyboard */; };
 		7A47940A2075002B002507CC /* PlaneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4794092075002B002507CC /* PlaneController.swift */; };
 		7AF568FA2084E4020068217C /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF568F92084E4020068217C /* ObjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A067C5520874B8D006C12D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A3982A62085EDB800FF2AC4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		7A3C1A86207648F0000CC20D /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 		7A4793F22074C603002507CC /* AR Inspirational Bit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Inspirational Bit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,7 +28,6 @@
 		7A4793F72074C603002507CC /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		7A4793F92074C603002507CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7A4793FC2074C603002507CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7A4793FE2074C606002507CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A4794012074C606002507CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A4794032074C606002507CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A4794092075002B002507CC /* PlaneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneController.swift; sourceTree = "<group>"; };
@@ -70,9 +70,9 @@
 				7AF568F92084E4020068217C /* ObjectViewController.swift */,
 				7A4794092075002B002507CC /* PlaneController.swift */,
 				7A3C1A86207648F0000CC20D /* MeasureViewController.swift */,
+				7A067C5520874B8D006C12D5 /* Assets.xcassets */,
 				7A3982A62085EDB800FF2AC4 /* ImageViewController.swift */,
 				7A4793FB2074C603002507CC /* Main.storyboard */,
-				7A4793FE2074C606002507CC /* Assets.xcassets */,
 				7A4794002074C606002507CC /* LaunchScreen.storyboard */,
 				7A4794032074C606002507CC /* Info.plist */,
 			);
@@ -139,7 +139,7 @@
 			files = (
 				7A4793F82074C603002507CC /* art.scnassets in Resources */,
 				7A4794022074C606002507CC /* LaunchScreen.storyboard in Resources */,
-				7A4793FF2074C606002507CC /* Assets.xcassets in Resources */,
+				7A067C5620874B8D006C12D5 /* Assets.xcassets in Resources */,
 				7A4793FD2074C603002507CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
